@@ -1,2 +1,17 @@
-clicar no check
-mover o mouse
+Tarefa, Tipo, Dado
+Encerra atividade da calculadora, ação, calculadora
+Abrir barra de tarefas, tecla, win
+Pesquisar aplicativo da calculadora, texto, calculadora
+Abrir aplicativo, tecla, enter
+Escolher números e operação, click, teclado numérico
+Efetuar operação, tecla, enter
+Capturar tela, ação, imagem 
+Salvar no diretório, salvar, imagem
+Verificar se a imagem consta no diretório, condicional, imagem
+Limpar histórico calculadora, click, teclado numérico
+Escolher números e operação, click, teclado numérico
+Efetuar operação, tecla, enter
+Capturar tela, ação, imagem
+Salvar no diretório, salvar, imagem
+Verificar se a imagem consta no diretório, condicional, imagem
+Fechar aplicativo da calculadora, tecla, alt + f4
