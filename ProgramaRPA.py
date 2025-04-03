@@ -3,6 +3,7 @@ import pyautogui
 import time
 from datetime import datetime
 from openpyxl import Workbook
+from openpyxl.styles import Font,PatternFill
 
 # Definir a pausa entre os comandos
 pyautogui.PAUSE = 1
@@ -63,6 +64,9 @@ def capturar_tela():
 # Função para fechar a janela do Word
 def fechar_janela_word():
     pyautogui.hotkey("alt", "f4")
+    nome_arquivo = f"Arquivo_word_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+    pyautogui.write(nome_arquivo, interval=0.1)
+    pyautogui.press("enter")
     time.sleep(1)
     os.system("taskkill /f /im winword.exe")
     print("Janela do Word fechada com sucesso!")
@@ -73,6 +77,12 @@ def gerar_relatorio(tarefas_executadas):
     ws = wb.active
     ws.append(["Tarefa", "Status", "Tempo Estimado"])
     
+    #5. Formatar o cabeçalho: negrito e com preenchimento cinza claro
+    header_fill = PatternFill(start_color="DDDDDD",fill_type="solid" )
+    for cell in ws[1]:
+        cell.font = Font(bold=True)
+        cell.fill = header_fill
+
     for tarefa in tarefas_executadas:
         ws.append([tarefa['tarefa'], tarefa['status'], tarefa['tempo']])
     
