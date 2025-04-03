@@ -32,19 +32,19 @@ def abrir_menu_iniciar():
     time.sleep(2)
 
 # Função para selecionar o documento em branco
-def selecionar_documento_em_branco():
-    documento_em_branco = False
+def selecionar_documento_branco():
+    documento_branco = False
     tentativas = 0
-    while not documento_em_branco and tentativas < 5:
+    while not documento_branco and tentativas < 5:
         # Clica no botão "Documento em branco" (substitua pelo nome correto da imagem)
-        documento_em_branco = clicar_botao("documento_em_branco.jpg")
+        documento_branco = clicar_botao("documento_branco.png")
         
-        if not documento_em_branco:
+        if not documento_branco:
             print("Tentando novamente...")
             tentativas += 1
             time.sleep(2)
 
-    return documento_em_branco
+    return documento_branco
 
 # Função para digitar texto no documento
 def digitar_texto():
@@ -54,7 +54,7 @@ def digitar_texto():
 
 # Função para capturar a tela
 def capturar_tela():
-    nome_arquivo = datetime.now().strftime("minha_tela_%Y%m%d_%H%M%S.jpg")
+    nome_arquivo = datetime.now().strftime("minha_tela_%Y%m%d_%H%M%S.png")
     screenshot = pyautogui.screenshot()
     screenshot.save(nome_arquivo)
     print("Imagem salva com sucesso!")
@@ -91,13 +91,13 @@ def executar_automacao():
     
     # Selecionar documento em branco
     tarefas_executadas.append({"tarefa": "Selecionar documento em branco", "status": "Em progresso", "tempo": "3"})
-    documento_em_branco = selecionar_documento_em_branco()
-    if documento_em_branco:
+    documento_branco = selecionar_documento_branco()
+    if documento_branco:
         tarefas_executadas[-1]["status"] = "Sucesso"
     else:
         tarefas_executadas[-1]["status"] = "Falha"
 
-    if documento_em_branco:
+    if documento_branco:
         # Digitar texto no documento
         tarefas_executadas.append({"tarefa": "Digitar texto", "status": "Em progresso", "tempo": "2"})
         digitar_texto()
