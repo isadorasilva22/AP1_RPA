@@ -1,11 +1,9 @@
 Tarefa, Tipo, Dado
 Abrir barra de tarefas, tecla, win
-Pesquisar "Word'", texto, Word
+Pesquisar Word, texto, Word
 Abrir aplicativo, tecla, enter
-Pesquisa o ícone de documento em branco, click, imagem
+Pesquisa o ícone de documento em branco, click, documento_em_branco.jpg
 Abre documento em branco, click, documento
 Edita o documento, texto, Primeiro projeto de RPA realizado com sucesso pelas alunas Beatriz Bramont e Isadora Cristyne!
 Capturar tela, screenshot, imagem
 Fechar janela Word, tecla, alt + f4
-
-OBS: mover clicar_botão para mouse
